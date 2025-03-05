@@ -7,7 +7,7 @@ const LayoutPublic = () => {
     return (
         <>
             <Navbar />
-            {/* <Outlet /> */}
+            <Outlet />
             {/* <Footer /> */}
         </>
 

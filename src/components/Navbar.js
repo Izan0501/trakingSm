@@ -15,7 +15,7 @@ const Navbar = () => {
             <header className="header" id="header">
                 <nav className="nav container">
                     <a href="/" className="nav__logo">
-                        Tracking
+                        Trekking
                     </a>
                     <div className={menuVisible ? 'show-menu' : 'nav__menu'} id='nav-menu'>
                         <ul className='nav__list'>
@@ -37,18 +37,13 @@ const Navbar = () => {
                     <div onClick={handleToggle} className="nav-toggle">
                         {
                             !menuVisible
-                                ? <i className="ri-menu-line"></i> 
+                                ? <i className="ri-menu-line"></i>
                                 : <div className="nav__close" id='nav-close'>
                                     <i className="ri-close-large-line"></i>
                                 </div>}
                     </div>
                 </nav>
             </header>
-
-
-
-
-
             {/* <nav class="navbar">
                 <ul>
                     <li><NavLink to="/">Home</NavLink></li>
