@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
@@ -10,9 +10,33 @@ const Navbar = () => {
     };
     // handle toggle ends
 
+    // navChangeOnScroll
+    // header reference
+    const headerRef = useRef(null);
+
+    const blurHeader = () => {
+        if (window.scrollY >= 50) {
+            // Addclass
+            headerRef.current.classList.add('scroll-header');
+        } else {
+            // removeClass
+            headerRef.current.classList.remove('scroll-header');
+        }
+    };
+
+    useEffect(() => {
+        // add the scroll event when the component is mounted
+        window.addEventListener('scroll', blurHeader);
+        return () => {
+            // remove the scroll event when the component is unmounted
+            window.removeEventListener('scroll', blurHeader);
+        };
+    }, []);
+    // navChangeEnds
+
     return (
         <>
-            <header className="header" id="header">
+            <header ref={headerRef} className="header" id="header">
                 <nav className="nav container">
                     <a href="/" className="nav__logo">
                         Trekking
@@ -44,13 +68,6 @@ const Navbar = () => {
                     </div>
                 </nav>
             </header>
-            {/* <nav class="navbar">
-                <ul>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
-                    <li><NavLink to="/blog">Blog</NavLink></li>
-                </ul>
-            </nav> */}
         </>
     )
 }
