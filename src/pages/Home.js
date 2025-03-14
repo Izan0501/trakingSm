@@ -1,13 +1,14 @@
 import React from 'react'
 import HomeCard from '../components/HomeCard'
+import About from './About'
+import Contact from './Contact'
 
 const Home = () => {
-  const image1 = require('../assets/images/Foto 2.jpeg.jpg')
-
   return (
     <>
+    {/* Home Section */}
       <section className='home section' id='home'>
-        <img src={image1} alt='home img' className="home__bg"></img>
+        <img src={require('../assets/images/Foto 2.jpeg.jpg')} alt='home img' className="home__bg"></img>
         <div className="home__shadow"></div>
         <div className="home__container container grid">
           <div className="home__data">
@@ -20,7 +21,7 @@ const Home = () => {
             <p className="home__description">
               Ideal para amantes del aire libre y la naturaleza.
             </p>
-            <a href="#" className='button'>
+            <a href="#contact" className='button'>
               INSCRIBIRME <i className='ri-arrow-right-line'></i>
             </a>
           </div>
@@ -32,6 +33,21 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Home Section Ends */}
+
+      {/* About Section */}
+      <section className="about section" id="about">
+        <About />
+      </section>
+      {/* About Section Ends*/}
+
+      {/* FormSection */}
+      <section className="form section" id='contact'>
+        <Contact/>
+      </section>
+      {/* FormSection Ends*/}
+
+
     </>
   )
 }

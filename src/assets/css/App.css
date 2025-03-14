@@ -9,7 +9,8 @@
   --title-color: hsl(0, 0%, 95%);
   --text-color: hsl(0, 0%, 70%);
   --text-color-light: hsl(0, 0%, 60%);
-  --body-color: hsl(0, 0%, 0%);
+  /* --body-color: hsl(0, 0%, 0%); */
+  --body-color: #caa869;
   --container-color: hsl(0, 0%, 8%);
   /* font and typography 
     /.5rem = 8px | 1rem = 16px ...*/
@@ -186,7 +187,7 @@ img {
     transition: opacity 0.5s ease, transform 0.5s ease;
     background: transparent;
     margin-left: 39%;
-    margin-top: 64%;
+    margin-top: 80%;
   }
 
   #nav-menu.show-menu {
@@ -194,7 +195,7 @@ img {
     transform: translateX(0);
     background: transparent;
     margin-left: 39%;
-    margin-top: 64%;
+    margin-top: 80%;
   }
 
   .nav__list {
@@ -294,8 +295,9 @@ img {
 }
 
 .home__description {
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 1.2rem;
+  color: hsl(0deg 48.81% 25.72%) !important;
 }
 
 .home__title {
@@ -428,6 +430,120 @@ img {
 }
 /* Home Cards Ends */
 /* Home Section Ends*/
+
+/* About Section */
+.about__container {
+  row-gap: 3rem;
+}
+
+.about__data {
+  text-align: center;
+}
+
+.about__description {
+  margin-bottom: 2rem;
+  color: hsl(0deg 0% 0%);
+}
+
+.about__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.about__img {
+  width: 300px;
+  transition: transform 0.4s;
+}
+
+.about__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 50%,
+    hsl(0, 0%, 0%) 125%
+  );
+}
+
+.about__image:hover .about__img {
+  transform: scale(1.2);
+}
+/* About Section Ends*/
+/* FormSection */
+.form__container {
+  width: 100%;
+  height: 10%;
+  margin-left: 0px;
+  padding: 20px;
+  row-gap: 3rem;
+  padding-bottom: 2.5rem;
+  background-color: #5d4b2a !important;
+  margin-bottom: 5rem;
+}
+
+#form__tittle{
+  margin-top: 50px;
+}
+
+.form__data {
+  text-align: center;
+}
+
+.form__description {
+  margin-bottom: 2rem;
+}
+
+.join__form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.form__input {
+  padding: 1.25rem 1rem;
+  background-color: var(--container-color);
+}
+
+.form__button {
+  cursor: pointer;
+  text-align: center !important;
+  width: 50%;
+}
+
+.form__image {
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.form__img {
+  width: 300px;
+  transition: transform 0.4s;
+}
+
+.form__shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 50%,
+    hsl(0, 0%, 0%) 125%
+  ) !important;
+}
+
+.form__image:hover .form__img{
+  transform: scale(1.2);
+}
+/* FormSection Ends*/
 
 /* FooterSection */
 footer {
