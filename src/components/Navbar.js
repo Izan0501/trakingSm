@@ -8,6 +8,10 @@ const Navbar = () => {
     const handleToggle = () => {
         setMenuVisible(!menuVisible);
     };
+
+    const linkAction = () => {
+        setMenuVisible(!menuVisible)
+    }
     // handle toggle ends
 
     // navChangeOnScroll
@@ -43,28 +47,29 @@ const Navbar = () => {
                     </a>
                     <div className={menuVisible ? 'show-menu' : 'nav__menu'} id='nav-menu'>
                         <ul className='nav__list'>
-                            <li className='nav__item'>
+                            <li onClick={handleToggle} className='nav__item'>
                                 <NavLink to="/" className={'nav__link'}>Home</NavLink>
                             </li>
-                            <li className='nav__item'>
+                            <li onClick={handleToggle} className='nav__item'>
                                 <NavLink to="/about" className={'nav__link'}>About</NavLink>
                             </li>
-                            <li className='nav__item'>
+                            <li onClick={handleToggle} className='nav__item'>
                                 <NavLink to="/blog" className={'nav__link'}>Blog</NavLink>
                             </li>
-                            <li className='nav__item'>
+                            <li onClick={handleToggle} className='nav__item'>
                                 <NavLink to="/contact" className={'nav__link'}>Contact</NavLink>
                             </li>
                         </ul>
                     </div>
                     {/* Toggle & close buttoms */}
-                    <div onClick={handleToggle} className="nav-toggle">
+                    <div onClick={handleToggle} className="nav__toggle">
                         {
                             !menuVisible
                                 ? <i className="ri-menu-line"></i>
                                 : <div className="nav__close" id='nav-close'>
                                     <i className="ri-close-large-line"></i>
-                                </div>}
+                                </div>
+                        }
                     </div>
                 </nav>
             </header>
