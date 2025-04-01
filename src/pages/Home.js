@@ -4,6 +4,7 @@ import About from './About'
 import Contact from './Contact'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../components/FramerVariants'
+import Blog from './Blog'
 
 const Home = () => {
   return (
@@ -64,8 +65,12 @@ const Home = () => {
         <Contact />
       </section>
       {/* FormSection Ends*/}
-
-
+      
+      {/* BlogSection */}
+      <section className="blog section" id='blog'>
+        <Blog />
+      </section>
+      {/* BlogSection Ends*/}
     </>
   )
 }
