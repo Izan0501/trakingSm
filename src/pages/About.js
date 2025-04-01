@@ -43,8 +43,8 @@ const About = () => {
           </motion.div>
         </div>
         <div className="about__image">
-          <img src={require('../assets/images/trk2.png')} alt="" className="about__img" />
-          <div className="about__shadow"></div>
+          <img src={require('../assets/images/sm4.jpg')} alt="" className="about__img" />
+          {/* <div className="about__shadow"></div> */}
         </div>
       </div>
     </>

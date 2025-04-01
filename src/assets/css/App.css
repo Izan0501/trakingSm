@@ -435,12 +435,12 @@ img {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  border-radius: 5px;
 }
 
 .about__img {
   width: 300px;
   transition: transform 0.4s;
+  border-radius: 5%;
 }
 
 .about__shadow {
@@ -564,8 +564,16 @@ img {
 
 .blog__content{
   position: relative;
-  padding-top: 16rem;
-  row-gap: 2.5rem;
+  padding-top: 12rem;
+  row-gap: 1.5rem;
+}
+
+#blog__title {
+  margin-bottom: 1rem;
+}
+
+.blog__data {
+  padding-bottom: 2.5rem;
 }
 
 .blog__user {
