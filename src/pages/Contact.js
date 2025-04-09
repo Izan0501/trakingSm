@@ -1,6 +1,8 @@
 import React from 'react'
 import { fadeIn } from '../components/FramerVariants'
 import { motion } from 'framer-motion'
+import BlogCards from '../components/BlogCards'
+
 
 const Contact = () => {
   return (
@@ -43,6 +45,7 @@ const Contact = () => {
           <div className="form__shadow"></div>
         </div>
       </div>
+      <BlogCards />
     </>
   )
 }

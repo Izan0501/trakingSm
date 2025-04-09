@@ -13,7 +13,7 @@ const Blog = () => {
         <div className="blog__content container grid">
           <div className="blog__data">
             <motion.div
-              variants={fadeIn("up", 0.2)}
+              variants={fadeIn("left", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.6 }}
