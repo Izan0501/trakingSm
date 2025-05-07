@@ -8,10 +8,6 @@ const Navbar = () => {
     const handleToggle = () => {
         setMenuVisible(!menuVisible);
     };
-
-    const linkAction = () => {
-        setMenuVisible(!menuVisible)
-    }
     // handle toggle ends
 
     // navChangeOnScroll
